@@ -5,7 +5,7 @@ import WeatherCard from './components/WeatherCard';
 import ForecastCard from './components/ForecastCard';
 import SearchHistory from './components/SearchHistory';
 
-const API_KEY = '527ba8fd3f0fe0b08717b15651b7bb62';
+const API_KEY = import.meta.env.VITE_API_KEY
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const UNITS = 'metric';
 const HISTORY_LIMIT = 5;
