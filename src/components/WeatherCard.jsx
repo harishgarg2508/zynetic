@@ -3,43 +3,42 @@ import { WiHumidity, WiStrongWind } from 'react-icons/wi';
 const WeatherCard = ({ weatherData, darkMode }) => {
   if (!weatherData) return null;
 
+  const { name, main, weather, wind } = weatherData;
+  const { temp, humidity } = main;
+  const { description, icon } = weather[0];
+
   return (
-    <div className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-6 mt-6 max-w-md mx-auto`}>
+    <div className={`rounded-lg shadow-lg p-6 mt-6 max-w-md mx-auto ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'}`}>
       <div className="text-center">
-        <h2 className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-gray-800'}`}>{weatherData.name}</h2>
-        <div className="flex justify-center items-center">
+        <h2 className="text-3xl font-bold">{name}</h2>
+        <div className="flex justify-center">
           <img 
-            src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
-            alt={weatherData.weather[0].description}
+            src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+            alt={description}
             className="w-24 h-24"
+            aria-label="Weather Icon"
           />
         </div>
-        <p className={`text-5xl font-bold my-2 ${darkMode ? 'text-white' : 'text-gray-800'}`}>
-          {Math.round(weatherData.main.temp)}°C
-        </p>
-        <p className={`text-xl capitalize ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-          {weatherData.weather[0].description}
-        </p>
+        <p className="text-5xl font-bold my-2">{Math.round(temp)}°C</p>
+        <p className="text-xl capitalize text-gray-400">{description}</p>
       </div>
       
       <div className="flex justify-around mt-6">
-        <div className="flex items-center">
-          <WiHumidity className="text-3xl text-blue-500" />
-          <div className="ml-2">
-            <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Humidity</p>
-            <p className="text-lg font-semibold">{weatherData.main.humidity}%</p>
-          </div>
-        </div>
-        <div className="flex items-center">
-          <WiStrongWind className="text-3xl text-blue-500" />
-          <div className="ml-2">
-            <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Wind Speed</p>
-            <p className="text-lg font-semibold">{weatherData.wind.speed} km/h</p>
-          </div>
-        </div>
+        <InfoCard icon={<WiHumidity className="text-3xl text-blue-500" />} label="Humidity" value={`${humidity}%`} />
+        <InfoCard icon={<WiStrongWind className="text-3xl text-blue-500" />} label="Wind Speed" value={`${wind.speed} km/h`} />
       </div>
     </div>
   );
 };
+
+const InfoCard = ({ icon, label, value }) => (
+  <div className="flex items-center">
+    {icon}
+    <div className="ml-2">
+      <p className="text-sm text-gray-400">{label}</p>
+      <p className="text-lg font-semibold">{value}</p>
+    </div>
+  </div>
+);
 
 export default WeatherCard;
