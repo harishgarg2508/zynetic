@@ -73,5 +73,22 @@ A responsive weather application built with **React** and **Vite** that allows u
    5-Day Forecast:
    GET https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=${UNITS}
 
+   API Key:
+   **You need to sign up at OpenWeatherMap to get an API key.**
+   Add the API key to the .env file as VITE_API_KEY.
+   Rate Limits:
+   The free tier of OpenWeatherMap API allows 60 API calls per minute. Ensure you handle rate limits appropriately.
+`
 
-
+4.Usage
+```bash
+Enter a city name in the search bar and press the Enter button or click search icon.
+View the current weather and 5-day forecast for the city.
+Toggle between Light Mode and Dark Mode using the button in the top-right corner.
+Click on a city in the Recent Searches section to quickly search for it again.
+```
+5.Future Enhancements
+```bash
+Implement a caching mechanism for API responses to reduce redundant calls.
+Add support for geolocation to fetch weather data for the user's current location.
+Seaching city with country code to avoid confusion in cities with same name.
