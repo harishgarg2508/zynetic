@@ -3,9 +3,9 @@ import { WiHumidity, WiStrongWind } from 'react-icons/wi';
 const WeatherCard = ({ weatherData, theme }) => {  // receiving weatherData and theme as props
   if (!weatherData) return null;  //If no weatherData is available, return null to prevent rendering an empty component
 
-  const { name, main, weather, wind } = weatherData;      // Destructure relevant properties from weatherData
-  const { temp, humidity } = main;                        //Extract temperature and humidity
-  const { description, icon} = weather[0];                // Extract weather description and icon
+  const { name, main, weather, wind } = weatherData;      // Destructuring the relevant properties from weatherData
+  const { temp, humidity } = main;                        //Extracting the temperature and humidity
+  const { description, icon} = weather[0];                // Extracting  weather description and icon
 
   return (
     <div className={`rounded-lg p-6 mt-6 max-w-md mx-auto border-t-8 border-x-8 border-amber-400  shadow-xl contrast-150  shadow-indigo-500 ${theme}`}>
