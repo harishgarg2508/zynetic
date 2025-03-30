@@ -15,11 +15,11 @@ const WeatherCard = ({ weatherData, theme }) => {  // receiving weatherData and 
         <h2 className="text-3xl font-bold hover:transition-shadow hover:animate-bounce">{name}</h2>
         
         {/* Weather icon with hover spin animation */}
-        <div className="hover:animate-spin flex  justify-center w-1/3 ml-32 bg-rose-300 rounded-full p-4 mt-4 shadow-lg shadow-indigo-500/50">
+        <div className="hover:animate-spin flex  justify-center w-1/3 ml-32 bg-rose-300 rounded-full p-4 mt-4 shadow-lg shadow-indigo-500/50 mx-auto sm:w-1/3 sm:ml-32">
           <img 
             src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
             alt={description}
-            className="w-24 h-24"
+            className="w-24 max-w-[96px] h-auto "
           />
         </div>
 
