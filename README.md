@@ -36,5 +36,26 @@ A responsive weather application built with **React** and **Vite** that allows u
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/weather-app.git
-   cd weather-app
+   https://github.com/harishgarg2508/zynetic.git
+   cd zynetic
+   npm install
+   npm run dev
+   https://localhost:5173
+
+Project Structure
+src/
+├── components/
+│   ├── ForecastCard.jsx       # Displays the 5-day weather forecast
+│   ├── SearchHistory.jsx      # Displays the recent search history
+│   ├── WeatherCard.jsx        # Displays the current weather details
+├── [App.jsx]                  # Main application component
+├── index.css                  # Global styles
+└── main.jsx                   # Entry point for the React app
+
+
+Key Functionalities
+1. Dark Mode
+2. Search History
+3. Weather and Forecast Data
+/weather for current weather.
+/forecast for the 5-day forecast.
