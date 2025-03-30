@@ -8,7 +8,7 @@ import SearchHistory from './components/SearchHistory';
 const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const UNITS = 'metric';
-const HISTORY_LIMIT = 5;
+const HISTORY_LIMIT = 5; // Limiting search history to 5 cities so that in future it can be changes easily
 const FORECAST_INTERVAL = 8;
 
 function App() {
@@ -19,19 +19,23 @@ function App() {
   const [forecastData, setForecastData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [searchHistory, setSearchHistory] = useState([]);
+  const [searchHistory, setSearchHistory] = useState([]); // this is to store search history
 
+
+  // here fetching  dark mode state from local storage
   const [darkMode, setDarkMode] = useState(() => {
     return JSON.parse(localStorage.getItem("darkMode")) || false;
   });
-
   const theme = darkMode ? 'dark bg-gray-900 text-white' : 'light bg-amber-100 border-sky-200 text-black';
  
+
+  //useEffect to set dark mode in local storage
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
 
+  //here loading the search history from local storage
 
   useEffect(() => {
     const storedHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
@@ -43,6 +47,7 @@ function App() {
   };
 
   
+  // this function is  to update search history and store it in the  local storage
   const updateSearchHistory = (cityName) => {
     setSearchHistory(prevHistory => {
       const updatedHistory = [cityName, ...prevHistory.filter(c => c !== cityName)].slice(0, HISTORY_LIMIT);
@@ -52,6 +57,8 @@ function App() {
   };
   
   
+  // this function is fetching the weather and forecast data from api. Used array destructuring to get the data from the api and store in the variables
+
   const fetchWeatherAndForecast = useCallback(async (cityName) => {
     setLoading(true);
     setError(null);
@@ -73,7 +80,7 @@ function App() {
     }
   }, []);
 
-
+  // this function is to handle the submition of the form
   const handleSubmit = (e) => {
     e.preventDefault();
     if (city.trim()) fetchWeatherAndForecast(city.trim());
@@ -82,6 +89,8 @@ function App() {
   return (
     <div className={`min-h-screen p-4 transition-colors ${theme}`}>
       <div className="max-w-4xl mx-auto">
+
+        {/* Dark mode toggle button */}
         <div className="flex justify-end mb-4">
           <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
             {darkMode ? <FiSun className="text-2xl light:hover:bg-white" /> : <FiMoon className="text-2xl" />}
@@ -98,22 +107,29 @@ function App() {
             placeholder="Enter city name"
             className={`flex-1 border-4 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme}`}
           />
-          <button type="submit" className={`px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600`}>
-            <FiSearch className="text-xl" />
+
+          {/* Refresh button to fetch weather again */}
+          <button type="submit" className={`px-4 py-2 cursor-pointer bg-blue-500 text-white rounded-lg  hover:bg-blue-600`}>
+            <FiSearch className="text-xl " />
           </button>
           {weatherData && (
-            <button type="button" onClick={() => fetchWeatherAndForecast(weatherData.name)} className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">
+            <button type="button" onClick={() => fetchWeatherAndForecast(weatherData.name)} className="cursor-pointer px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">
               <FiRefreshCw className="text-xl" />
             </button>
           )}
         </form>
+
+        {/* Search history */}
         {searchHistory.length > 0 && <SearchHistory history={searchHistory} onCitySelect={fetchWeatherAndForecast} theme={theme} />}
 
+        {/* Loading spinner and error message */}
         {loading && <div className="text-center mt-8"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div></div>}
         {error && <p className="text-center mt-8 text-red-500">{error}</p>}
 
+        {/* Weather and forecast cards */}
         {weatherData && <WeatherCard weatherData={weatherData} theme={theme} />}
         {forecastData && <ForecastCard forecast={forecastData} theme={theme} />}
+
       </div>
     </div>
   );
