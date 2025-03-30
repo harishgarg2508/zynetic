@@ -5,7 +5,7 @@ const WeatherCard = ({ weatherData, theme }) => {  // receiving weatherData and 
 
   const { name, main, weather, wind } = weatherData;      // Destructuring the relevant properties from weatherData
   const { temp, humidity } = main;                        //Extracting the temperature and humidity
-  const { description, icon} = weather[0];                // Extracting  weather description and icon
+  const { description, icon} = weather[0];                // Extracting weather description and icon
 
   return (
     <div className={`rounded-lg p-6 mt-6 max-w-md mx-auto border-t-8 border-x-8 border-amber-400  shadow-xl contrast-150  shadow-indigo-500 ${theme}`}>
@@ -15,7 +15,7 @@ const WeatherCard = ({ weatherData, theme }) => {  // receiving weatherData and 
         <h2 className="text-3xl font-bold hover:transition-shadow hover:animate-bounce">{name}</h2>
         
         {/* Weather icon with hover spin animation */}
-        <div className="hover:animate-spin flex  justify-center w-1/3 ml-32 bg-rose-300 rounded-full p-4 mt-4 shadow-lg shadow-indigo-500/50 sm:w-1/4 sm:ml-25">
+        <div className="hover:animate-spin flex  justify-center w-1/3 ml-32 bg-rose-300 rounded-full p-4 mt-4 shadow-lg shadow-indigo-500/50">
           <img 
             src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
             alt={description}
