@@ -65,7 +65,7 @@ A responsive weather application built with **React** and **Vite** that allows u
    /forecast for the 5-day forecast.
 ```
 
-3. Api Reference
+3.  <h1>Api Reference
    ```bash
    Endpoints Used:
    Current Weather:
@@ -79,8 +79,8 @@ A responsive weather application built with **React** and **Vite** that allows u
 
    
   <h1> Rate Limits:
-  <h3>The free tier of OpenWeatherMap API allows 60 API calls/minute 1,000,000 calls/monthC urrent weather API 3-hour forecast for 5 days API</h3>
-
+  <h3>The free tier of OpenWeatherMap API allows 60 API calls/minute 1,000,000 calls/month. Current weather API 3-hour forecast for 5 days API</h3>
+```
 
 4.Usage
 ```bash
