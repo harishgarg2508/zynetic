@@ -36,15 +36,16 @@ A responsive weather application built with **React** and **Vite** that allows u
 
 ## Installation
 
-1. Clone the repository:
+1.  <h1>Clone the repository:
    ```bash
    git clone https://github.com/harishgarg2508/zynetic.git
    cd zynetic
    npm install
    npm run dev
    https://localhost:5173
+```
 
-2. Project Structure
+2. <h1>Project Structure
 ```bash
    src/
    ├── components/
@@ -79,17 +80,19 @@ A responsive weather application built with **React** and **Vite** that allows u
 ```
    
   <h1> Rate Limits:
-  <h3>The free tier of OpenWeatherMap API allows 60 API calls/minute 1,000,000 calls/month. Current weather API 3-hour forecast for 5 days API</h3>
+  <h3>The free tier of OpenWeatherMap API allows 60 API calls/minute 1,000,000 calls/month.
+  <h3>Current weather API
+  <h3></h3>3-hour forecast for 5 days API</h3>
 
 
-4. <h2>Usage
+4. <h1>Usage
 ```bash
 Enter a city name in the search bar and press the Enter button or click search icon.
 View the current weather and 5-day forecast for the city.
 Toggle between Light Mode and Dark Mode using the button in the top-right corner.
 Click on a city in the Recent Searches section to quickly search for it again.
 ```
-5.Future Enhancements
+5. <h1>Future Enhancements
 ```bash
 Implement a caching mechanism for API responses to reduce redundant calls.
 Add support for geolocation to fetch weather data for the user's current location.
