@@ -1,12 +1,40 @@
-# React + Vite
+# Weather App 🌦️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive weather application built with **React** and **Vite** that allows users to search for current weather and a 5-day forecast for any city. The app includes features like dark mode, search history, and a user-friendly interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 🌤 **Current Weather**: Displays real-time weather data for the searched city.
+- 📅 **5-Day Forecast**: Provides a 5-day weather forecast with key details.
+- 🌙 **Dark Mode**: Toggle between light and dark themes for better user experience.
+- 🕒 **Search History**: Keeps track of the last 5 searched cities for quick access.
+- ⚡ **Responsive Design**: Fully responsive and optimized for all devices.
+- 🔄 **Refresh Weather**: Refresh the weather data for the current city.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Demo
+
+![Weather App Screenshot](https://via.placeholder.com/800x400)  
+*(Replace this with an actual screenshot of your app)*
+
+---
+
+## Tech Stack
+
+- **Frontend**: React, Vite
+- **Styling**: Tailwind CSS
+- **Icons**: React Icons
+- **API**: OpenWeatherMap API
+- **State Management**: React Hooks (`useState`, `useEffect`, `useCallback`)
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app

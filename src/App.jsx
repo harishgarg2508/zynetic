@@ -84,7 +84,7 @@ function App() {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-end mb-4">
           <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-            {darkMode ? <FiSun className="text-2xl" /> : <FiMoon className="text-2xl" />}
+            {darkMode ? <FiSun className="text-2xl light:hover:bg-white" /> : <FiMoon className="text-2xl" />}
           </button>
         </div>
 
