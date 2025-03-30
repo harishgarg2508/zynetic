@@ -76,9 +76,11 @@ A responsive weather application built with **React** and **Vite** that allows u
    API Key:
    **You need to sign up at OpenWeatherMap to get an API key.**
    Add the API key to the .env file as VITE_API_KEY.
-   Rate Limits:
-   The free tier of OpenWeatherMap API allows 60 API calls per minute. Ensure you handle rate limits appropriately.
-`
+
+   
+  <h1> Rate Limits:
+  <h3>The free tier of OpenWeatherMap API allows 60 API calls/minute 1,000,000 calls/monthC urrent weather API 3-hour forecast for 5 days API</h3>
+
 
 4.Usage
 ```bash
