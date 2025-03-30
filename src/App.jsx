@@ -20,7 +20,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [searchHistory, setSearchHistory] = useState([]);
-  const [bounce, setBounce] = useState(true);
 
   const [darkMode, setDarkMode] = useState(() => {
     return JSON.parse(localStorage.getItem("darkMode")) || false;
@@ -32,9 +31,7 @@ function App() {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
-  useEffect(() => {
-    if (city) setBounce(false);
-  }, [city]);
+
 
   useEffect(() => {
     const storedHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
@@ -99,7 +96,7 @@ function App() {
             value={city}
             onChange={(e) => setCity(e.target.value)}
             placeholder="Enter city name"
-            className={`flex-1 border-4 px-4 py-2 ${bounce ? "animate-bounce" : ''} rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme}`}
+            className={`flex-1 border-4 px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme}`}
           />
           <button type="submit" className={`px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600`}>
             <FiSearch className="text-xl" />
