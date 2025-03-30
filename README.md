@@ -41,11 +41,11 @@ A responsive weather application built with **React** and **Vite** that allows u
    npm install
    npm run dev
    https://localhost:5173
-
+```bash
 Project Structure
 src/
 ├── components/
-│   ├── ForecastCard.jsx       # Displays the 5-day weather forecast
+│   ├── ForecastCard.jsx       # Displays the 5-day weather forecast 
 │   ├── SearchHistory.jsx      # Displays the recent search history
 │   ├── WeatherCard.jsx        # Displays the current weather details
 ├── [App.jsx]                  # Main application component
