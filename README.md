@@ -38,7 +38,7 @@ A responsive weather application built with **React** and **Vite** that allows u
 
 1. Clone the repository:
    ```bash
-   https://github.com/harishgarg2508/zynetic.git
+   git clone https://github.com/harishgarg2508/zynetic.git
    cd zynetic
    npm install
    npm run dev
