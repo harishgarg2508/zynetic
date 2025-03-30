@@ -76,13 +76,13 @@ A responsive weather application built with **React** and **Vite** that allows u
    API Key:
    **You need to sign up at OpenWeatherMap to get an API key.**
    Add the API key to the .env file as VITE_API_KEY.
-
+```
    
   <h1> Rate Limits:
   <h3>The free tier of OpenWeatherMap API allows 60 API calls/minute 1,000,000 calls/month. Current weather API 3-hour forecast for 5 days API</h3>
-```
 
-4.Usage
+
+4. <h2>Usage
 ```bash
 Enter a city name in the search bar and press the Enter button or click search icon.
 View the current weather and 5-day forecast for the city.
