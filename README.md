@@ -46,16 +46,17 @@ A responsive weather application built with **React** and **Vite** that allows u
 
 2. Project Structure
 ```bash
-src/
-├── components/
-│   ├── ForecastCard.jsx       # Displays the 5-day weather forecast 
-│   ├── SearchHistory.jsx      # Displays the recent search history
-│   ├── WeatherCard.jsx        # Displays the current weather details
-├── [App.jsx]                  # Main application component
-├── index.css                  # Global styles
-└── main.jsx                   # Entry point for the React app
+   src/
+   ├── components/
+   │   ├── ForecastCard.jsx       # Displays the 5-day weather forecast 
+   │   ├── SearchHistory.jsx      # Displays the recent search history
+   │   ├── WeatherCard.jsx        # Displays the current weather details
+   ├── [App.jsx]                  # Main application component
+   ├── index.css                  # Global styles
+   └── main.jsx                   # Entry point for the React app
+```
 
-
+```bash
    Key Functionalities
    1. Dark Mode
    2. Search History
