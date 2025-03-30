@@ -11,6 +11,8 @@ A responsive weather application built with **React** and **Vite** that allows u
 - 🌙 **Dark Mode**: Toggle between light and dark themes for better user experience.
 - 🕒 **Search History**: Keeps track of the last 5 searched cities for quick access.
 - ⚡ **Responsive Design**: Fully responsive and optimized for all devices.
+- ⚡ **Loader Animation**: Loader animation while data is being fetched.
+- ⚡ **Basic animations**: Basic animations or transitions using Tailwind CSS .
 - 🔄 **Refresh Weather**: Refresh the weather data for the current city.
 
 ---
@@ -41,8 +43,9 @@ A responsive weather application built with **React** and **Vite** that allows u
    npm install
    npm run dev
    https://localhost:5173
+
+2. Project Structure
 ```bash
-Project Structure
 src/
 ├── components/
 │   ├── ForecastCard.jsx       # Displays the 5-day weather forecast 
@@ -53,9 +56,21 @@ src/
 └── main.jsx                   # Entry point for the React app
 
 
-Key Functionalities
-1. Dark Mode
-2. Search History
-3. Weather and Forecast Data
-/weather for current weather.
-/forecast for the 5-day forecast.
+   Key Functionalities
+   1. Dark Mode
+   2. Search History
+   3. Weather and Forecast Data
+   /weather for current weather.
+   /forecast for the 5-day forecast.
+```
+
+3. Api Reference
+   ```bash
+   Endpoints Used:
+   Current Weather:
+   GET https://api.openweathermap.org/data/2.5/weather?q={city}&appid={YOUR_API_KEY}&units=metric
+   5-Day Forecast:
+   GET https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=${UNITS}
+
+
+
