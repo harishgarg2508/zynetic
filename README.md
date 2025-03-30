@@ -17,8 +17,7 @@ A responsive weather application built with **React** and **Vite** that allows u
 
 ## Demo
 
-![Weather App Screenshot](https://via.placeholder.com/800x400)  
-*(Replace this with an actual screenshot of your app)*
+![image](https://github.com/user-attachments/assets/5c4a577d-0af4-4b9f-ac1d-72e32480856d)
 
 ---
 
