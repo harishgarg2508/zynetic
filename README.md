@@ -81,8 +81,8 @@ A responsive weather application built with **React** and **Vite** that allows u
    
   <h1> Rate Limits:
   <h3>The free tier of OpenWeatherMap API allows 60 API calls/minute 1,000,000 calls/month.
-  <h3>Current weather API
-  <h3></h3>3-hour forecast for 5 days API</h3>
+  <h3>-> Current weather API
+  <h3>-> 3-hour forecast for 5 days API</h3>
 
 
 4. <h1>Usage
