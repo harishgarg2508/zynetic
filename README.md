@@ -19,7 +19,7 @@ A responsive weather application built with **React** and **Vite** that allows u
 
 ## Demo
 ![image](https://github.com/user-attachments/assets/35635b40-40c9-4568-8356-c0968e452f05)
-![image](https://github.com/user-attachments/assets/10296ded-670f-4368-9289-dbd2a8acb352)
+![image](https://github.com/user-attachments/assets/3ede1342-9f64-497e-878d-d2f757c9518e)
 
 
 ---
