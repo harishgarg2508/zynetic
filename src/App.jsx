@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { FiSearch, FiRefreshCw, FiMoon, FiSun } from 'react-icons/fi';
-import WeatherCard from './components/WeatherCard';
+import WeatherCard from './components/weatherCard';
 import ForecastCard from './components/ForecastCard';
 import SearchHistory from './components/SearchHistory';
 
